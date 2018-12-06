@@ -2,6 +2,7 @@ package readpreviews;
 
 import java.awt.Component;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
@@ -147,12 +148,13 @@ JMenuBar menuBar;
       } else if (source == GUI.this.reportButton) {
         String buffer = Utilities.writeOrderFile();
         JEditorPane editorPane = new JEditorPane();
+        editorPane.setFont(new Font("Monospaced", Font.PLAIN, 12));
         editorPane.setText(buffer);
         editorPane.setEditable(false);
         JScrollPane editorScrollPane = new JScrollPane(editorPane);
         editorScrollPane
           .setVerticalScrollBarPolicy(22);
-        editorScrollPane.setPreferredSize(new Dimension(800, 400));
+        editorScrollPane.setPreferredSize(new Dimension(900, 400));
         editorScrollPane.setMinimumSize(new Dimension(10, 10));
         JFrame frame = new JFrame("Order Report");
         frame.setDefaultCloseOperation(2);
