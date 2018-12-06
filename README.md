@@ -42,3 +42,8 @@ regular expressions.
 * The 'Report' button generates the text file containing marked items and also presents the results 
 in a text window.
 * The 'Help/About' menu selection presents a dummy 'help' window.
+* On exit by 'File/Exit' or closing the window, the application writes the ReadPreviews.xml file to 
+preserve the order status of all items and writes ReadPreviews.txt to list all marked items if there 
+are any.
+## Dependancies
+The application uses the xstream library to read and write XML files.
