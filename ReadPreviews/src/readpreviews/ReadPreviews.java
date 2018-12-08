@@ -8,6 +8,8 @@ import javax.swing.SwingUtilities;
 public class ReadPreviews
 {
   public static String targetMonth = "";
+  public static String previewsVolume = "";
+  public static String previewsMonth = "";
   public static String currentPreviewsPageNumber = "";
   public static ArrayList<PreviewsEntry> entries = new ArrayList<PreviewsEntry>();
   public static GUI window;
