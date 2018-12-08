@@ -13,6 +13,7 @@ import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.io.File;
 import java.util.regex.PatternSyntaxException;
+
 import javax.swing.Box;
 import javax.swing.DefaultCellEditor;
 import javax.swing.JButton;
@@ -24,7 +25,6 @@ import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
@@ -165,12 +165,85 @@ JMenuBar menuBar;
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
       } else if (source == GUI.this.aboutItem) {
-        JOptionPane.showMessageDialog(null, "Something goes here...", 
-          "ReadPreviews help:", 3);
+    	  JLabel		label		= new JLabel(helpAboutText());
+    	  JScrollPane	aboutText	= new JScrollPane(label);
+    	  JFrame		frame		= new JFrame("About readpreviews");
+    	  frame.setDefaultCloseOperation(2);
+    	  frame.add(aboutText);
+    	  frame.pack();
+    	  frame.setLocationRelativeTo(null);
+    	  frame.setVisible(true);
+        /*
+           JOptionPane.showMessageDialog(null, helpAboutText(), 
+          "About ReadPreviews", 3);
+         */
       }
     }
   };
 
+  public String helpAboutText() {
+	  return "<html><body style=\"margin-top: 0px; margin-left: 20px; margin-right: 0px;\"><h1><a id=\"readpreviews_0\"></a>readpreviews</h1>" + 
+	  		"<p>PREVIEWS (comics) monthly catalog mark-up application</p>" + 
+	  		"<a href=\"https://github.com/mpbeemer/readpreviews.git\">https://github.com/mpbeemer/readpreviews.git</a></p>" + 
+	  		"<h2><a id=\"Background_2\"></a>Background</h2>" + 
+	  		"<p>PREVIEWS is a monthly catalog of comic shop items.  The vendor provides a hard-copy<br>" + 
+	  		"catalog, a text file listing all of the items and a PDF order form file.  An order to<br>" + 
+	  		"the retailer containing the item numbers and the page number on the order form assists<br>" + 
+	  		"them in placing their orders to the vendor.</p>" + 
+	  		"<h2><a id=\"Application_7\"></a>Application</h2>" + 
+	  		"<p>readpreviews parses the monthly text file and presents a window with the data in table<br>" + 
+	  		"format, providing dynamic sort and search features.  On exit it writes an XML file to<br>" + 
+	  		"record the order status of all items and a text file containing marked items.</p>" + 
+	  		"<h5><a id=\"Prerequisites_11\"></a>Pre-requisites</h5>" + 
+	  		"<p>The catalog text file does not contain the order form page numbers, so the user must provide a<br>" + 
+	  		"support file listing the last item number appearing on each order form page. This can be a dummy<br>" + 
+	  		"value of ‘9999 99’ to assign ‘order form page 99’ to all items and the user can add the actual<br>" + 
+	  		"page numbers manually once the order is compiled.</p>" + 
+	  		"<h5><a id=\"Configuration_16\"></a>Configuration</h5>" + 
+	  		"<p>A configuration file named ReadPreviewsConfiguration.xml will be written when the application is<br>" + 
+	  		"first run.  This contains dummy values that can be edited before running the application again to<br>" + 
+	  		"provide customer name, address and phone information for the header of the order text.</p>" + 
+	  		"<h2><a id=\"Operation_20\"></a>Operation</h2>" + 
+	  		"<ul>" + 
+	  		"<li>The application will read the contents of ReadPreviews.xml if it is present.  If not it will<br>" + 
+	  		"present a table with no contents.</li>" + 
+	  		"<li>The File/Open menu selection will present file selection<br>" + 
+	  		"dialogs for the catalog text file and the order form page number file.  The data from the files<br>" + 
+	  		"will be parsed and merged and presented in table format:" + 
+	  		"<ul>" + 
+	  		"<li>Unlabeled column (order status: 1,2,3 - quantity, W - ‘watch’, S - ‘save’, L - ‘look up’, ? - ‘undecided’, ‘o’ (obsolete), ‘x’ - ‘not selected’)</li>" + 
+	  		"<li>Month (catalog month designation)</li>" + 
+	  		"<li>Item (item number)</li>" + 
+	  		"<li>Description</li>" + 
+	  		"<li>Ships (estimated shipping month and day)</li>" + 
+	  		"<li>Price (retail price: ‘PI’ - ‘Please Inquire’)</li>" + 
+	  		"<li>Page (catalog page number)</li>" + 
+	  		"<li>From (order form page number)</li>" + 
+	  		"<li>Prefixes (catalog file prefixes: ‘FI’ - ‘Featured Item’, ‘OA’ - ‘Offered Again’, etc.)</li>" + 
+	  		"</ul>" + 
+	  		"</li>" + 
+	  		"<li>Each of the columns may be clicked to sort the data on that field.  When returning to an<br>" + 
+	  		"unfinished order it is useful to sort on the order status column so unmarked items are presented<br>" + 
+	  		"first.</li>" + 
+	  		"<li>Items can be marked by selecting them and pressing the corresponding key, or by selecting a value<br>" + 
+	  		"from the drop-down before the ‘Mark Items’ button and pressing that button.  The drop-down provides<br>" + 
+	  		"a blank option to un-mark items which is not otherwise available.</li>" + 
+	  		"<li>The status bar at the bottom of the window shows the number of items currently selected and their<br>" + 
+	  		"total price.</li>" + 
+	  		"<li>The search field in the center of the menu bar provides a dynamic search supporting<br>" + 
+	  		"regular expressions.</li>" + 
+	  		"<li>Order form pages for one or more items can be set by selecting the items, entering the page number into the unlabeled field before the ‘Update Page’ button and pressing that button.</li>" + 
+	  		"<li>The ‘Report’ button generates the text file containing marked items and also presents the results<br>" + 
+	  		"in a text window.</li>" + 
+	  		"<li>The ‘Help/About’ menu selection presents a dummy ‘help’ window.</li>" + 
+	  		"<li>On exit by ‘File/Exit’ or closing the window, the application writes the ReadPreviews.xml file to<br>" + 
+	  		"preserve the order status of all items and writes ReadPreviews.txt to list all marked items if there<br>" + 
+	  		"are any.</li>" + 
+	  		"</ul>" + 
+	  		"<h2><a id=\"Dependancies_53\"></a>Dependancies</h2>" + 
+	  		"<p>The application uses the xstream library to read and write XML files.</p>" + 
+	  		"</html>";
+  }
   KeyListener filterTextKeyListener = new KeyListener() {
     public void keyTyped(KeyEvent e) {
       if (e.getKeyChar() == '\033')

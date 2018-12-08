@@ -1777,6 +1777,9 @@
     <ENTRY month="DEC18" item="0620" status="" prefixes="" ships="07/24/19" price="$99.99" page="62" from="12">
       <description>ABSOLUTE DAYTRIPPER HC (RES) (MR)</description>
     </ENTRY>
+    <ENTRY month="DEC18" item="0621" status="L" prefixes="" ships="03/20/19" price="$24.99" page="62" from="12">
+      <description>AUTHORITY BY ED BRUBAKER &amp; DUSTIN NGUYEN TP</description>
+    </ENTRY>
     <ENTRY month="DEC18" item="0622" status="" prefixes="SS" ships="01/16/19" price="$75.00" page="62" from="12">
       <description>ABSOLUTE AUTHORITY HC VOL 01 (APR170432)</description>
     </ENTRY>
@@ -1933,6 +1936,9 @@
     <ENTRY month="DEC18" item="0674" status="" prefixes="" ships="07/31/19" price="$60.00" page="78" from="13">
       <description>DC ARTISTS ALLEY HAWKGIRL B&amp;W BY ZULLO PVC FIGURE</description>
     </ENTRY>
+    <ENTRY month="DEC18" item="0675" status="L" prefixes="" ships="07/31/19" price="$60.00" page="78" from="13">
+      <description>DC ARTISTS ALLEY SUPERGIRL BY ZULLO PVC FIGURE</description>
+    </ENTRY>
     <ENTRY month="DEC18" item="0676" status="" prefixes="" ships="07/31/19" price="$60.00" page="78" from="13">
       <description>DC ARTISTS ALLEY SUPERGIRL B&amp;W BY ZULLO PVC FIGURE</description>
     </ENTRY>
@@ -1944,6 +1950,9 @@
     </ENTRY>
     <ENTRY month="DEC18" item="0679" status="" prefixes="" ships="07/31/19" price="$80.00" page="79" from="13">
       <description>BATMAN BLACK &amp; WHITE STATUE BY KENNETH ROCAFORT</description>
+    </ENTRY>
+    <ENTRY month="DEC18" item="0680" status="L" prefixes="" ships="07/31/19" price="$150.00" page="80" from="13">
+      <description>DC DESIGNER SER WONDER WOMAN BY JENNY FRISON STATUE</description>
     </ENTRY>
     <ENTRY month="DEC18" item="0681" status="" prefixes="" ships="07/31/19" price="$80.00" page="81" from="13">
       <description>BATMAN FAMILY ROBIN MULTI PART STATUE</description>
@@ -2836,6 +2845,9 @@
     <ENTRY month="DEC18" item="1087" status="" prefixes="GEM" ships="02/06/19" price="$50.00" page="169" from="16">
       <description>RED SONJA #1 FRANK CHO VIRGIN VAR (C: 0-1-2)</description>
     </ENTRY>
+    <ENTRY month="DEC18" item="1088" status="W" prefixes="SPOT" ships="02/13/19" price="$3.99" page="170" from="16">
+      <description>ARMY OF DARKNESS BUBBA HOTEP #1 CVR A GOMEZ</description>
+    </ENTRY>
     <ENTRY month="DEC18" item="1089" status="" prefixes="SPOT" ships="02/13/19" price="$3.99" page="170" from="16">
       <description>ARMY OF DARKNESS BUBBA HOTEP #1 CVR B MANDRAKE</description>
     </ENTRY>
@@ -3397,6 +3409,12 @@
     <ENTRY month="DEC18" item="1340" status="" prefixes="GEM" ships="02/13/19" price="$3.99" page="196" from="19">
       <description>BUFFY THE VAMPIRE SLAYER #2 PREORDER INZANA VAR</description>
     </ENTRY>
+    <ENTRY month="DEC18" item="1343" status="1" prefixes="" ships="02/20/19" price="$3.99" page="198" from="19">
+      <description>FIREFLY #4 MAIN</description>
+    </ENTRY>
+    <ENTRY month="DEC18" item="1344" status="W" prefixes="" ships="02/20/19" price="$3.99" page="198" from="19">
+      <description>FIREFLY #4 PREORDER QUINONES VAR</description>
+    </ENTRY>
     <ENTRY month="DEC18" item="1348" status="" prefixes="SPOT" ships="02/06/19" price="$4.99" page="200" from="19">
       <description>WWE #25</description>
     </ENTRY>
@@ -3450,6 +3468,9 @@
     </ENTRY>
     <ENTRY month="DEC18" item="1368" status="" prefixes="KIDS" ships="04/10/19" price="$14.99" page="207" from="19">
       <description>MECH CADET YU TP VOL 03 (C: 0-1-2)</description>
+    </ENTRY>
+    <ENTRY month="DEC18" item="1369" status="1" prefixes="" ships="02/13/19" price="$16.99" page="207" from="19">
+      <description>THRILLING ADVENTURE HOUR MARTIAN MANHUNT TP (C: 0-1-2)</description>
     </ENTRY>
     <ENTRY month="DEC18" item="1370" status="" prefixes="KIDS" ships="02/27/19" price="$3.99" page="208" from="19">
       <description>JIM HENSON LABYRINTH CORONATION #11</description>
@@ -9246,27 +9267,6 @@
     </ENTRY>
     <ENTRY month="DEC18" item="3318" status="" prefixes="" ships="01/30/19" price="$3.99" page="M-167" from="46">
       <description>TOPPS 2019 CHROME BUNDESLIGA SOCCER T/C BOX (Net) (C: 1-1-1)</description>
-    </ENTRY>
-    <ENTRY month="DEC18" item="1343" status="1" prefixes="" ships="02/20/19" price="$3.99" page="198" from="19">
-      <description>FIREFLY #4 MAIN</description>
-    </ENTRY>
-    <ENTRY month="DEC18" item="1369" status="1" prefixes="" ships="02/13/19" price="$16.99" page="207" from="19">
-      <description>THRILLING ADVENTURE HOUR MARTIAN MANHUNT TP (C: 0-1-2)</description>
-    </ENTRY>
-    <ENTRY month="DEC18" item="0621" status="L" prefixes="" ships="03/20/19" price="$24.99" page="62" from="12">
-      <description>AUTHORITY BY ED BRUBAKER &amp; DUSTIN NGUYEN TP</description>
-    </ENTRY>
-    <ENTRY month="DEC18" item="0675" status="L" prefixes="" ships="07/31/19" price="$60.00" page="78" from="13">
-      <description>DC ARTISTS ALLEY SUPERGIRL BY ZULLO PVC FIGURE</description>
-    </ENTRY>
-    <ENTRY month="DEC18" item="0680" status="L" prefixes="" ships="07/31/19" price="$150.00" page="80" from="13">
-      <description>DC DESIGNER SER WONDER WOMAN BY JENNY FRISON STATUE</description>
-    </ENTRY>
-    <ENTRY month="DEC18" item="1088" status="W" prefixes="SPOT" ships="02/13/19" price="$3.99" page="170" from="16">
-      <description>ARMY OF DARKNESS BUBBA HOTEP #1 CVR A GOMEZ</description>
-    </ENTRY>
-    <ENTRY month="DEC18" item="1344" status="W" prefixes="" ships="02/20/19" price="$3.99" page="198" from="19">
-      <description>FIREFLY #4 PREORDER QUINONES VAR</description>
     </ENTRY>
   </ENTRIES>
 </CATALOG>
