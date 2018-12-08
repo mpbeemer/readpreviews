@@ -14,6 +14,10 @@ The catalog text file does not contain the order form page numbers, so the user 
 support file listing the last item number appearing on each order form page. This can be a dummy 
 value of '9999 99' to assign 'order form page 99' to all items and the user can add the actual 
 page numbers manually once the order is compiled.
+##### Configuration
+A configuration file named ReadPreviewsConfiguration.xml will be written when the application is 
+first run.  This contains dummy values that can be edited before running the application again to 
+provide customer name, address and phone information for the header of the order text.
 ## Operation
 * The application will read the contents of ReadPreviews.xml if it is present.  If not it will 
 present a table with no contents.
@@ -46,5 +50,6 @@ in a text window.
 * On exit by 'File/Exit' or closing the window, the application writes the ReadPreviews.xml file to 
 preserve the order status of all items and writes ReadPreviews.txt to list all marked items if there 
 are any.
+
 ## Dependancies
 The application uses the xstream library to read and write XML files.
