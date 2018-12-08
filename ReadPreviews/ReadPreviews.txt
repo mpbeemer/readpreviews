@@ -1,0 +1,39 @@
+================================================================================
+V28#12  Previews Order Form
+
+Michael Beemer
+123 Main Street
+Anywhere, OK  9999
+999-999-9999
+
+QTY  TITLE                                                                    PRICE    ORDERED FROM   EXPECTED  RECD
+
+1    DEC18 1343  FIREFLY #4 MAIN                                              $ 3.99 - Page 19        02/20     00/00 p198
+1    DEC18 1369  THRILLING ADVENTURE HOUR MARTIAN MANHUNT TP (C: 0-1-2)       $16.99 - Page 19        02/13     00/00 p207
+
+================================================================================ Total: $ 20.98
+
+L    DEC18 0621  AUTHORITY BY ED BRUBAKER & DUSTIN NGUYEN TP                  $24.99 - Page 12        03/20     00/00 p062
+L    DEC18 0675  DC ARTISTS ALLEY SUPERGIRL BY ZULLO PVC FIGURE               $60.00 - Page 13        07/31     00/00 p078
+L    DEC18 0680  DC DESIGNER SER WONDER WOMAN BY JENNY FRISON STATUE         $150.00 - Page 13        07/31     00/00 p080
+
+W    DEC18 1088  ARMY OF DARKNESS BUBBA HOTEP #1 CVR A GOMEZ                  $ 3.99 - Page 16        02/13     00/00 p170
+W    DEC18 1344  FIREFLY #4 PREORDER QUINONES VAR                             $ 3.99 - Page 19        02/20     00/00 p198
+
+
+--------------------------------------------------------------------------------------------------------------------
+
+================================================================================
+V28#12  Previews Order Form
+
+Michael Beemer
+123 Main Street
+Anywhere, OK  9999
+999-999-9999
+
+QTY  TITLE                                                                    PRICE    ORDERED FROM   EXPECTED  RECD
+
+1    DEC18 1343  FIREFLY #4 MAIN                                              $ 3.99 - Page 19
+1    DEC18 1369  THRILLING ADVENTURE HOUR MARTIAN MANHUNT TP (C: 0-1-2)       $16.99 - Page 19
+
+================================================================================
