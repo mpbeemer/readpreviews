@@ -29,8 +29,9 @@ will be parsed and merged and presented in table format:
   * Page (catalog page number)
   * From (order form page number)
   * Prefixes (catalog file prefixes: 'FI' - 'Featured Item', 'OA' - 'Offered Again', etc.)
-Each of the columns may be clicked to sort the data on that field.  When returning to an unfinished 
-order it is useful to sort on the order status column so unmarked items are presented first.
+* Each of the columns may be clicked to sort the data on that field.  When returning to an 
+unfinished order it is useful to sort on the order status column so unmarked items are presented 
+first.
 * Items can be marked by selecting them and pressing the corresponding key, or by selecting a value 
 from the drop-down before the 'Mark Items' button and pressing that button.  The drop-down provides 
 a blank option to un-mark items which is not otherwise available.

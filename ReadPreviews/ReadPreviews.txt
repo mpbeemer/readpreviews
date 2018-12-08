@@ -1,9 +1,9 @@
 ================================================================================
 V28#12  Previews Order Form
 
-Michael Beemer
+B. Customer
 123 Main Street
-Anywhere, OK  9999
+Anywhere, OK  99999
 999-999-9999
 
 QTY  TITLE                                                                    PRICE    ORDERED FROM   EXPECTED  RECD
@@ -26,9 +26,9 @@ W    DEC18 1344  FIREFLY #4 PREORDER QUINONES VAR                             $ 
 ================================================================================
 V28#12  Previews Order Form
 
-Michael Beemer
+B. Customer
 123 Main Street
-Anywhere, OK  9999
+Anywhere, OK  99999
 999-999-9999
 
 QTY  TITLE                                                                    PRICE    ORDERED FROM   EXPECTED  RECD

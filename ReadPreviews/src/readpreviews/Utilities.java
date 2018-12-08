@@ -109,6 +109,35 @@ public class Utilities
     return convertCatalogFromXML(getStringFromFile(fileName));
   }
 
+	public static Object convertConfigurationFromXML(String XMLString) {
+		Object object = null;
+		XStream xstream = new XStream(new DomDriver());
+		xstream.setMode(XStream.NO_REFERENCES);
+		xstream.alias("configuration", Configuration.class);
+		try {
+			object = xstream.fromXML(XMLString);
+		} catch (Exception e) {
+			// pass null object back.
+		}
+		return object;
+	}
+
+	public static Object getConfigurationFromXMLFile(String fileName) {
+		return convertConfigurationFromXML(getStringFromFile(fileName));
+	}
+
+	  public static String convertConfigurationToXML(Object object) {
+			XStream xstream = new XStream(new DomDriver());
+			xstream.setMode(XStream.NO_REFERENCES);
+			xstream.alias("configuration", Configuration.class);
+			return xstream.toXML(object);
+		}
+
+		public static boolean saveConfigurationToXMLFile(String fileName,
+				Object object) {
+			return saveStringToFile(fileName,postProcessXML(convertConfigurationToXML(object)));
+		}
+
   public static void readPreviewsEntries(String textFile, String partNumberFile) throws NumberFormatException
   {
     String result = getStringFromFile(textFile);
@@ -200,10 +229,10 @@ public class Utilities
     String header = "================================================================================" + CRLF + 
       "V" + ReadPreviews.catalog.volume + "#" + ReadPreviews.catalog.month + "  Previews Order Form" + CRLF + 
       CRLF + 
-      "Michael Beemer" + CRLF + 
-      "123 Main Street" + CRLF + 
-      "Anywhere, OK  9999" + CRLF + 
-      "999-999-9999" + CRLF + 
+      ReadPreviews.configuration.customerName + CRLF + 
+      ReadPreviews.configuration.customerStreet + CRLF + 
+      ReadPreviews.configuration.customerCityStateZip + CRLF + 
+      ReadPreviews.configuration.customerPhone + CRLF + 
       CRLF + 
       "QTY  TITLE                                                                    PRICE    ORDERED FROM   EXPECTED  RECD" + CRLF + 
       CRLF;

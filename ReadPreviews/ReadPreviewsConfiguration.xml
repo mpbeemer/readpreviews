@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+<configuration>
+  <customerName>B. Customer</customerName>
+  <customerStreet>123 Main Street</customerStreet>
+  <customerCityStateZip>Anywhere, OK  99999</customerCityStateZip>
+  <customerPhone>999-999-9999</customerPhone>
+</configuration>

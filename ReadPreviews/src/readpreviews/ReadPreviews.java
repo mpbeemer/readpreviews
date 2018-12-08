@@ -6,14 +6,21 @@ import javax.swing.SwingUtilities;
 
 public class ReadPreviews
 {
-  public static String targetMonth = "";
-  public static String currentPreviewsPageNumber = "";
-  public static PreviewsCatalog catalog = new PreviewsCatalog();
-  public static GUI window;
+  public static String			targetMonth					= "";
+  public static String			currentPreviewsPageNumber	= "";
+  public static Configuration	configuration				= new Configuration();
+  public static PreviewsCatalog	catalog						= new PreviewsCatalog();
+  public static GUI				window;
 
   public static void main(String[] args)
   {
-    File xmlFile = new File("ReadPreviews.xml");
+	  File xmlFile = new File("ReadPreviewsConfiguration.xml");
+	  if (xmlFile.exists()) {
+		  configuration = (Configuration)Utilities.getConfigurationFromXMLFile("ReadPreviewsConfiguration.xml");
+	  } else {
+		  Utilities.saveConfigurationToXMLFile("ReadPreviewsConfiguration.xml", configuration);
+	  }
+    xmlFile = new File("ReadPreviews.xml");
     if (xmlFile.exists()) {
       catalog = (PreviewsCatalog)Utilities.getCatalogFromXMLFile("ReadPreviews.xml");
     }
