@@ -202,15 +202,15 @@ JMenuBar menuBar;
       }
       ListSelectionModel rowSM = (ListSelectionModel)e.getSource();
 
-      for (int idx = 0; idx < ReadPreviews.entries.size(); idx++)
+      for (int idx = 0; idx < ReadPreviews.catalog.entries.size(); idx++)
         if (rowSM.isSelectedIndex(idx)) {
           nFiles++;
           int modelRow = GUI.this.tableContents.convertRowIndexToModel(idx);
-          String price = ((PreviewsEntry)ReadPreviews.entries.get(modelRow)).price.replace("$", "").trim();
+          String price = ((PreviewsEntry)ReadPreviews.catalog.entries.get(modelRow)).price.replace("$", "").trim();
           if (!price.equals("PI")) {
-            if (((PreviewsEntry)ReadPreviews.entries.get(modelRow)).status.equals("2"))
+            if (((PreviewsEntry)ReadPreviews.catalog.entries.get(modelRow)).status.equals("2"))
               total += Float.parseFloat(price) * 2.0F;
-            else if (((PreviewsEntry)ReadPreviews.entries.get(modelRow)).status.equals("3"))
+            else if (((PreviewsEntry)ReadPreviews.catalog.entries.get(modelRow)).status.equals("3"))
               total += Float.parseFloat(price) * 3.0F;
             else {
               total += Float.parseFloat(price);
@@ -289,8 +289,8 @@ JMenuBar menuBar;
       this.filterText.addKeyListener(this.filterTextKeyListener);
 
       this.filterText.addCaretListener(this.filterTextListener);
-      if ((ReadPreviews.entries == null) || 
-        (ReadPreviews.entries.size() <= 0)) {
+      if ((ReadPreviews.catalog.entries == null) || 
+        (ReadPreviews.catalog.entries.size() <= 0)) {
         this.filterText.setEnabled(false);
       }
       this.menuBar.add(Box.createRigidArea(new Dimension(10, 0)));
@@ -435,9 +435,8 @@ private void newFilter()
   }
 
   public void writeOutputFiles() {
-    if ((ReadPreviews.entries != null) && (ReadPreviews.entries.size() > 0)) {
-      Utilities.saveCatalogToXMLFile("ReadPreviews2.xml", ReadPreviews.catalog);
-      Utilities.saveEntriesToXMLFile("ReadPreviews.xml", ReadPreviews.entries);
+    if ((ReadPreviews.catalog.entries != null) && (ReadPreviews.catalog.entries.size() > 0)) {
+      Utilities.saveCatalogToXMLFile("ReadPreviews.xml", ReadPreviews.catalog);
       Utilities.writeOrderFile();
     }
   }
@@ -488,7 +487,7 @@ private void newFilter()
     }
 
     public int getRowCount() {
-      return ReadPreviews.entries.size();
+      return ReadPreviews.catalog.entries.size();
     }
 
     public String getColumnName(int col) {
@@ -497,7 +496,7 @@ private void newFilter()
 
     public Object getValueAt(int row, int col) {
       Object value = null;
-      PreviewsEntry entry = (PreviewsEntry)ReadPreviews.entries.get(row);
+      PreviewsEntry entry = (PreviewsEntry)ReadPreviews.catalog.entries.get(row);
       switch (col) {
       case 0:
         value = entry.status;
@@ -546,7 +545,7 @@ private void newFilter()
 
     public void setValueAt(Object value, int row, int col)
     {
-      PreviewsEntry entry = (PreviewsEntry)ReadPreviews.entries.get(row);
+      PreviewsEntry entry = (PreviewsEntry)ReadPreviews.catalog.entries.get(row);
       switch (col) {
       case 0:
         entry.status = ((String)value);
