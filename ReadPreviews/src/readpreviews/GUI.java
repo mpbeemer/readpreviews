@@ -436,8 +436,8 @@ private void newFilter()
 
   public void writeOutputFiles() {
     if ((ReadPreviews.entries != null) && (ReadPreviews.entries.size() > 0)) {
-      Utilities.saveObjectsToXMLFile("ReadPreviews.xml", 
-        ReadPreviews.entries);
+      Utilities.saveCatalogToXMLFile("ReadPreviews2.xml", ReadPreviews.catalog);
+      Utilities.saveEntriesToXMLFile("ReadPreviews.xml", ReadPreviews.entries);
       Utilities.writeOrderFile();
     }
   }

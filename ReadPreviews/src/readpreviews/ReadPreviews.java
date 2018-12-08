@@ -18,7 +18,8 @@ public static void main(String[] args)
   {
     File xmlFile = new File("ReadPreviews.xml");
     if (xmlFile.exists()) {
-      entries = (ArrayList<PreviewsEntry>)Utilities.getObjectsFromXMLFile("ReadPreviews.xml");
+      catalog = (PreviewsCatalog)Utilities.getCatalogFromXMLFile("ReadPreviews2.xml");
+      entries = (ArrayList<PreviewsEntry>)Utilities.getEntriesFromXMLFile("ReadPreviews.xml");
     }
     Collections.sort(entries, new PreviewsEntry.AltEntryComparator());
 
