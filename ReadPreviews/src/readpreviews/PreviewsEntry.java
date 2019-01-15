@@ -112,7 +112,7 @@ implements Comparable<PreviewsEntry>
 				"     00/00 ";
 
 		if (this.pageNumber.substring(0,1).equals("M"))
-			result = result + this.pageNumber.substring(0,1) + this.pageNumber.substring(2,5);
+			result = result + this.pageNumber.substring(0,1) + this.pageNumber.substring(2,this.pageNumber.length());
 		else
 			result = result + new StringBuilder("p" + String.format("%03d", new Object[] { Integer.valueOf(Integer.parseInt(this.pageNumber.trim())) }));
 

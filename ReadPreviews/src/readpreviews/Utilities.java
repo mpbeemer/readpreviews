@@ -160,9 +160,19 @@ public class Utilities
 			int vol = Integer.parseInt(matcher.group(2)) - 10;
 			ReadPreviews.targetMonth = matcher.group(1) + Integer.toString(vol);
 		} else {
-			JOptionPane.showMessageDialog(null, 
-					"Unable to read current month from input file.", 
-					"ReadPreviews halted", 0);
+			pattern = Pattern.compile("^PREVIEWS ([A-Z]{3}).* V.*(\\d\\d) .*(\\d)$");
+			matcher = pattern.matcher(data[0]);
+			found = matcher.matches();
+			if (found) {
+				ReadPreviews.catalog.volume = matcher.group(2);
+				ReadPreviews.catalog.month = matcher.group(3);
+				int vol = Integer.parseInt(matcher.group(2)) - 10;
+				ReadPreviews.targetMonth = matcher.group(1) + Integer.toString(vol);
+			} else {
+				JOptionPane.showMessageDialog(null, 
+						"Unable to read current month from input file.", 
+						"ReadPreviews halted", 0);
+			}
 		}
 
 		for (String dataLine : data) {
